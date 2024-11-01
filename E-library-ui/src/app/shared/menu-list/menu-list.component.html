@@ -1,0 +1,10 @@
+<ul class="nav nav-pills">
+  <li class="nav-item" *ngFor="let menuLink of menuList">
+    <a class="nav-link"
+       routerLinkActive="active-tab"
+       [routerLink]="menuLink.path"
+       [class.default-home]="menuLink.name === 'Home'">
+       {{menuLink.name}}
+    </a>
+  </li>
+</ul>

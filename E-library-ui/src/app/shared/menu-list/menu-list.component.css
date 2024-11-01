@@ -1,0 +1,12 @@
+/* Green color for active tab */
+.active-tab {
+  color: white;
+  background-color: green !important;
+}
+
+/* Green color for "Home" by default */
+.default-home {
+  background-color: green !important;
+  color: white;
+}
+
