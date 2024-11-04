@@ -17,7 +17,7 @@ export class BookDetailsComponent implements OnInit {
   constructor(private bookService: BooksService,private route:ActivatedRoute){
     this.bookId = this.route.snapshot.paramMap.get('id');
   }
-  
+
   ngOnInit(): void {
     this.bookService.getBookById(this.bookId).subscribe((response:any)=>{
       console.log(response);
@@ -25,4 +25,10 @@ export class BookDetailsComponent implements OnInit {
     });
   }
 
+  handleDeleteBook() {
+    this.bookService.deleteBookById(this.bookId).subscribe((response:any)=>{
+      console.log(response);
+      alert("Book Deleted Successfully");
+    })
+  }
 }

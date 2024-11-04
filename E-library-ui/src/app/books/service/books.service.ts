@@ -33,5 +33,9 @@ export class BooksService {
       }
     );
   }
+
+  deleteBookById(bookId: any) {
+    return this.http.delete(`${this.apiUrl}/${bookId}`);
+  }
 }
 
