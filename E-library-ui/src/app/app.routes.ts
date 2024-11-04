@@ -3,6 +3,7 @@ import {HomeComponent} from "./home/home.component";
 import {AboutComponent} from "./about/about.component";
 import {ListBooksComponent} from "./books/component/list-books/list-books.component";
 import {AddBooksComponent} from "./books/component/add-books/add-books.component";
+import {BookDetailsComponent} from "./books/component/book-details/book-details.component";
 
 
 export const routes: Routes = [
@@ -11,6 +12,7 @@ export const routes: Routes = [
   {path: 'books', component: ListBooksComponent, title: "Books"},
   {path: 'books', children: [
       {path: '', component: ListBooksComponent},
-      {path:'add', component: AddBooksComponent}
+      {path:'add', component: AddBooksComponent},
+      {path: ':id', component: BookDetailsComponent}
     ]}
 ];
