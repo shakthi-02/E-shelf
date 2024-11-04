@@ -1,0 +1,35 @@
+<img src="https://cdn0.iconfinder.com/data/icons/reading/154/add-books-read-literature-512.png" alt="Add books" width="70px" height="70px">&nbsp;
+<button routerLink="/books/add">Add Books</button>
+
+<div class="album py-5 bg-body-tertiary">
+  <h4 style="padding-left: 16px">List of Books: </h4>
+  <div class="container">
+
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      <div class="col" *ngFor="let book of books">
+        <div class="card shadow-sm">
+          <div class="card-img-top">
+            <img *ngIf="book.imageUrl; else placeholder" [src]="book.imageUrl" alt="{{ book.title }}" width="100%" height="225" />
+            <ng-template #placeholder>
+              <div style="width: 100%; height: 225px; background-color: #55595c; display: flex; align-items: center; justify-content: center; color: #eceeef;">
+                Thumbnail
+              </div>
+            </ng-template>
+          </div>
+
+          <div class="card-body">
+            <p class="card-text">{{book.description}}</p>
+            <div class="d-flex justify-content-between align-items-center">
+              <div class="btn-group">
+                <button type="button" class="btn  btn-outline-secondary" id="btn">View</button>
+                <button type="button" class="btn  btn-outline-secondary" id="btn">Edit</button>
+              </div>
+              <small class="text-body-secondary">9 mins</small>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+

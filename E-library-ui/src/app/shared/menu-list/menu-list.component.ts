@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {CommonModule} from "@angular/common";
-import {RouterModule} from "@angular/router";
+import {Router, RouterModule} from "@angular/router";
 
 @Component({
   selector: 'app-menu-list',
@@ -11,9 +11,17 @@ import {RouterModule} from "@angular/router";
 })
 export class MenuListComponent {
   menuList = [
-    {path: '', name: "Home", status: "active"},
+    {path: '/', name: "Home", status: "active"},
     {path: '/books', name: "Books" , status: ''},
     {path: '/about', name: "About", status: ''},
+    {path:'', name:'Contact'}
   ]
+
+  constructor(private router: Router) {
+  }
+
+  isActive(path: string): boolean {
+    return this.router.url === path || (path === '/' && this.router.url === '/');
+  }
 
 }

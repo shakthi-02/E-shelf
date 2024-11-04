@@ -1,10 +1,8 @@
-<ul class="nav nav-pills">
-  <li class="nav-item" *ngFor="let menuLink of menuList">
-    <a class="nav-link"
-       routerLinkActive="active-tab"
-       [routerLink]="menuLink.path"
-       [class.default-home]="menuLink.name === 'Home'">
-       {{menuLink.name}}
-    </a>
+<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+  <li *ngFor="let menuLink of menuList">
+    <a class="nav-link px-2 text-secondary"
+       [ngClass]="{'text-warning': isActive(menuLink.path), 'text-secondary': !isActive(menuLink.path)}"
+       [routerLink]="menuLink.path">{{menuLink.name}}</a>
   </li>
 </ul>
+

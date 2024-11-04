@@ -1,0 +1,94 @@
+<form class="col-md-6 offset-md-3" [formGroup]="addBookForm" (ngSubmit)="handleAddBook()">
+  <h2 class="mb-4">Add a New Book</h2>
+
+  <!-- ID Field -->
+  <div class="form-group row mb-3">
+    <label for="idInput" class="col-sm-2 col-form-label">ID</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        id="idInput"
+        placeholder="Enter Book ID"
+        formControlName="id"
+        required
+      />
+    </div>
+  </div>
+
+  <!-- Name Field -->
+  <div class="form-group row mb-3">
+    <label for="titleInput" class="col-sm-2 col-form-label">Title</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        id="titleInput"
+        placeholder="Enter Book Title"
+        formControlName="title"
+        required
+      />
+    </div>
+  </div>
+
+  <!-- Author Field -->
+  <div class="form-group row mb-3">
+    <label for="authorInput" class="col-sm-2 col-form-label">Author</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        id="authorInput"
+        placeholder="Enter Author Name"
+        formControlName="author"
+        required
+      />
+    </div>
+  </div>
+
+  <!-- Genre Field -->
+  <div class="form-group row mb-3">
+    <label for="genreInput" class="col-sm-2 col-form-label">Genre</label>
+    <div class="col-sm-10">
+      <input
+        type="text"
+        class="form-control"
+        id="genreInput"
+        placeholder="Enter Genre"
+        formControlName="genre"
+        required
+      />
+    </div>
+  </div>
+
+  <label for="image">Book Image</label>
+  <input type="file" (change)="onFileSelected($event)" id="image"/>
+
+  <!-- Description Field -->
+  <div class="form-group row mb-3">
+    <label for="descriptionInput" class="col-sm-2 col-form-label">Description</label>
+    <div class="col-sm-10">
+      <textarea
+        class="form-control"
+        id="descriptionInput"
+        rows="3"
+        placeholder="Enter Description"
+        formControlName="description"
+        required
+      ></textarea>
+    </div>
+  </div>
+
+  <!-- Submit and Back Buttons -->
+  <div class="form-group row">
+    <div class="col-sm-10 offset-sm-2 d-flex justify-content-start">
+      <button type="submit" class="btn btn-primary me-2 submitBtn">
+        Submit
+      </button>
+      <button type="button" class="btn btn-secondary">
+        Back
+      </button>
+    </div>
+  </div>
+
+</form>

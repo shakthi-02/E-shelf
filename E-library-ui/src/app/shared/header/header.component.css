@@ -1,1 +1,17 @@
+#login-btn{
+    background-color: #133E87;
+    color: #fff;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
 
+#login-btn:hover{
+    background-color: white !important;
+    color: black;
+    border: 1px solid #ffffff;
+    border-radius: 5px;
+    padding: 5px 10px;
+    margin-right: 10px;
+}
