@@ -1,21 +1,23 @@
-<a routerLink="/employees" class="btn btn-link">Go back</a>
+<button type="button" class="btn btn-secondary" routerLink="/books">
+  Back
+</button>
+<div style="margin-top: 10px;"></div>
 <div class="container">
   <div class="row">
     <div class="card col-md-12">
       <div class="card-body">
-        <h5 class="card-title">{{book.title}}</h5>
-        <p>
-         {{book.description}}
-        </p>
-        <p>{{book.author}} </p>
-        <p>{{book.genre}} </p>
-        <a
+        <h6 class="card-title"><strong>Title: </strong>{{book.title}}</h6>
+        <p><strong>Author: </strong>{{book.author}} </p>
+        <p><strong>Genre: </strong>{{book.genre}} </p>
+        <p><strong>Description: </strong>{{book.description}}</p>
+        <button
           routerLink="edit"
-          class="btn btn-primary"
+          class="btn"
         >
           Edit
-        </a>
-        <button type="button" class="btn btn-primary"  (click)="showDialog()">Delete</button>
+      </button>
+      &nbsp;
+        <button type="button" class="btn"  (click)="showDialog()">Delete</button>
         <p-dialog
           header="Delete Book Details"
           [(visible)]="displayDialog"
