@@ -17,25 +17,6 @@ export class UpdateBookComponent implements OnInit {
   book: any;
   updateBookForm: FormGroup;
 
-  // constructor(private bookService: BooksService,private route:ActivatedRoute){
-  //   this.bookId = this.route.snapshot.paramMap.get('id');
-  //   this.bookService.getBookById(this.bookId).subscribe((response:any)=>{
-  //     console.log(response);
-  //     this.book = response;
-  //   });
-  //   this.updateBookForm = new FormGroup({
-  //     id: new FormControl(this.bookId),
-  //     title: new FormControl(this.book.title),
-  //     author: new FormControl(this.book.author),
-  //     genre: new FormControl(this.book.genre),
-  //     description: new FormControl(this.book.description)
-  //   })
-  // }
-  
-  // ngOnInit(): void {
-   
-
-  // }
   constructor(private bookService: BooksService, private route: ActivatedRoute) {
     this.bookId = this.route.snapshot.paramMap.get('id');
     this.updateBookForm = new FormGroup({
