@@ -33,7 +33,6 @@ export class BookDetailsComponent implements OnInit {
   handleDeleteBook() {
     this.bookService.deleteBookById(this.bookId).subscribe((response:any)=>{
       console.log(response);
-      alert("Book Deleted Successfully");
     })
   }
 

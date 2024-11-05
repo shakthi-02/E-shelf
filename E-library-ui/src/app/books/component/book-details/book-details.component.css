@@ -15,6 +15,7 @@
 
 .value {
   flex: 2; /* Allows value to take more space */
+
 }
 
 .confirmation-message {

@@ -11,9 +11,9 @@ import {Router, RouterModule} from "@angular/router";
 })
 export class MenuListComponent {
   menuList = [
-    {path: '/', name: "Home", status: "active"},
-    {path: '/books', name: "Books" , status: ''},
-    {path: '/about', name: "About", status: ''},
+    {path: '/', name: "Home", },
+    {path: '/books', name: "Books" },
+    {path: '/about', name: "About"},
     {path:'', name:'Contact'}
   ]
 

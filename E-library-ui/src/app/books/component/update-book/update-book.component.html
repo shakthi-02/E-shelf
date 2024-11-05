@@ -12,7 +12,13 @@
         placeholder="Enter Book ID"
         formControlName="id"
         required
+        [ngClass] = "{
+              'is-invalid': updateBookForm.get('id')?.touched && updateBookForm.get('id')?.invalid
+            }"
       />
+      <div class="invalid-feedback">
+        <div id="idRequired">Id is required</div>
+      </div>
     </div>
   </div>
 
@@ -26,8 +32,14 @@
         id="titleInput"
         placeholder="Enter Book Title"
         formControlName="title"
+        [ngClass] = "{
+              'is-invalid': updateBookForm.get('title')?.touched && updateBookForm.get('title')?.invalid
+            }"
         required
       />
+      <div class="invalid-feedback">
+        <div id="titleRequired">Title is required</div>
+      </div>
     </div>
   </div>
 
@@ -41,8 +53,14 @@
         id="authorInput"
         placeholder="Enter Author Name"
         formControlName="author"
+        [ngClass] = "{
+              'is-invalid': updateBookForm.get('author')?.touched && updateBookForm.get('author')?.invalid
+            }"
         required
       />
+      <div class="invalid-feedback">
+        <div id="authorRequired">Author is required</div>
+      </div>
     </div>
   </div>
 
@@ -56,8 +74,14 @@
         id="genreInput"
         placeholder="Enter Genre"
         formControlName="genre"
+        [ngClass] = "{
+              'is-invalid': updateBookForm.get('genre')?.touched && updateBookForm.get('genre')?.invalid
+            }"
         required
       />
+      <div class="invalid-feedback">
+        <div id="genreRequired">Genre is required</div>
+      </div>
     </div>
   </div>
 
@@ -71,18 +95,45 @@
         rows="3"
         placeholder="Enter Description"
         formControlName="description"
+        [ngClass] = "{
+              'is-invalid': updateBookForm.get('description')?.touched && updateBookForm.get('description')?.invalid
+            }"
         required
       ></textarea>
+      <div class="invalid-feedback">
+        <div id="descriptionRequired">Description is required</div>
+      </div>
     </div>
   </div>
 
   <!-- Submit and Back Buttons -->
   <div class="form-group row">
     <div class="col-sm-10 offset-sm-2 d-flex justify-content-start">
-      <button type="submit" class="btn btn-primary me-2 submitBtn">
+      <button type="submit" class="btn me-2 submitBtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
         Submit
       </button>
-      <button type="button" class="btn btn-secondary">
+
+      <!-- Submit and Back Buttons -->
+      <div class="form-group row">
+        <div class="col-sm-10 offset-sm-2 d-flex justify-content-start">
+
+          <!-- Modal -->
+          <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-body">
+                  Successfully Updated!
+                </div>
+                <div class="modal-footer">
+                  <!-- Adding data-bs-dismiss="modal" here to remove the modal overlay -->
+                  <button type="button" class="btn" data-bs-dismiss="modal" routerLink="/books/{{bookId}}">Ok</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <button type="button" class="btn" routerLink="/books/{{bookId}}">
         Back
       </button>
     </div>

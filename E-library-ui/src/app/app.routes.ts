@@ -10,11 +10,10 @@ import { UpdateBookComponent } from './books/component/update-book/update-book.c
 export const routes: Routes = [
   {path: '', component: HomeComponent, title: "E-Library"},
   {path: 'about', component: AboutComponent, title: "About"},
-  {path: 'books', component: ListBooksComponent, title: "Books"},
   {path: 'books', children: [
-      {path: '', component: ListBooksComponent},
-      {path:'add', component: AddBooksComponent},
-      {path: ':id', component: BookDetailsComponent},
-      {path: ':id/edit', component: UpdateBookComponent}
+      {path: '', component: ListBooksComponent, title: "Books List"},
+      {path:'add', component: AddBooksComponent, title: "Add Book"},
+      {path: ':id', component: BookDetailsComponent, title: "Book Details"},
+      {path: ':id/edit', component: UpdateBookComponent, title: "Update Book"}
     ]}
 ];
