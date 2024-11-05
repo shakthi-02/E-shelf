@@ -1,27 +1,6 @@
 <form class="col-md-6 offset-md-3" [formGroup]="updateBookForm" (ngSubmit)="handleUpdateBook()">
   <h2 class="mb-4">Update Book Details</h2>
-
-  <!-- ID Field -->
-  <div class="form-group row mb-3">
-    <label for="idInput" class="col-sm-2 col-form-label">ID</label>
-    <div class="col-sm-10">
-      <input
-        type="text"
-        class="form-control"
-        id="idInput"
-        placeholder="Enter Book ID"
-        formControlName="id"
-        required
-        [ngClass] = "{
-              'is-invalid': updateBookForm.get('id')?.touched && updateBookForm.get('id')?.invalid
-            }"
-      />
-      <div class="invalid-feedback">
-        <div id="idRequired">Id is required</div>
-      </div>
-    </div>
-  </div>
-
+  
   <!-- Name Field -->
   <div class="form-group row mb-3">
     <label for="titleInput" class="col-sm-2 col-form-label">Title</label>

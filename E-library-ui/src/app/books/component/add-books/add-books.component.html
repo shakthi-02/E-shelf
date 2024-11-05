@@ -2,25 +2,7 @@
   <h2 class="mb-4">Add a New Book</h2>
 
   <!-- ID Field -->
-  <div class="form-group row mb-3">
-    <label for="idInput" class="col-sm-2 col-form-label">ID</label>
-    <div class="col-sm-10">
-      <input
-        type="text"
-        class="form-control"
-        id="idInput"
-        placeholder="Enter Book ID"
-        formControlName="id"
-        [ngClass] = "{
-        'is-invalid': addBookForm.get('id')?.touched && addBookForm.get('id')?.invalid
-        }"
-        required
-      />
-      <div class="invalid-feedback">
-        <div id="idRequired">Id is required</div>
-      </div>
-    </div>
-  </div>
+
 
   <!-- Name Field -->
   <div class="form-group row mb-3">

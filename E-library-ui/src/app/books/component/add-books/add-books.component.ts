@@ -23,7 +23,6 @@ export class AddBooksComponent {
 
   constructor(private bookService: BooksService) {
     this.addBookForm = new FormGroup({
-      id: new FormControl('',Validators.required),
       title: new FormControl('',Validators.required),
       author: new FormControl('',Validators.required),
       genre: new FormControl('',Validators.required),
