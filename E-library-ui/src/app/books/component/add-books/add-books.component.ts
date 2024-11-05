@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {BooksService} from "../../service/books.service";
+import {response} from "express";
 
 @Component({
   selector: 'app-add-books',
@@ -14,7 +15,6 @@ import {BooksService} from "../../service/books.service";
 })
 export class AddBooksComponent {
   addBookForm : FormGroup;
-  selectedFile: File | null = null;
 
   constructor(private bookService: BooksService) {
     this.addBookForm = new FormGroup({
@@ -28,38 +28,9 @@ export class AddBooksComponent {
   }
 
   handleAddBook() {
-    if (this.addBookForm.valid) {
-      const formData = new FormData();
-
-      const bookData = JSON.stringify(this.addBookForm.value);
-      formData.append('book', bookData);
-
-      if (this.selectedFile) {
-        formData.append('file', this.selectedFile);
-      }
-
-      this.bookService.addBook(formData).subscribe({
-        next: (response: any) => {
-          console.log('Book added successfully:', response);
-          this.addBookForm.reset();
-          this.selectedFile = null; // Reset the file input
-        },
-        error: (error: any) => {
-          console.error('Error uploading book or image:', error);
-        }
-      });
-    } else {
-      console.error('Form is not valid');
-    }
-  }
-
-
-
-  onFileSelected(event: Event) {
-    const fileInput = event.target as HTMLInputElement;
-    if (fileInput.files && fileInput.files.length > 0) {
-      this.selectedFile = fileInput.files[0];
-    }
-
+    console.log(this.addBookForm);
+    this.bookService.addBook(this.addBookForm.value).subscribe((response: any) => {
+      console.log(response);
+    })
   }
 }

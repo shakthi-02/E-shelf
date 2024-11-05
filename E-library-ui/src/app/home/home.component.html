@@ -3,8 +3,6 @@
   integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg=="
   crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-
-
 <style>
   .search-bar input {
     background-color: white;
@@ -27,34 +25,26 @@
   .search-bar input,
   .search-bar button {
     width: 100px;
-    /* Adjust width as needed */
   }
 
-  /* Responsive book cards */
   .book-grid {
-    /* Added a class to target the row of books */
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    /* Centers the cards horizontally */
   }
 
   .book-card {
-    /* Class for each book card */
     flex: 0 0 30%;
-    /* Each card takes 30% width */
     max-width: 30%;
     margin: 10px;
     box-sizing: border-box;
   }
 
-  /* Media queries for responsiveness */
   @media (max-width: 768px) {
     .book-card {
       flex: 0 0 45%;
       max-width: 45%;
     }
-
   }
 
   @media (max-width: 576px) {
@@ -65,14 +55,13 @@
   }
 </style>
 
-
-
 <div class="row align-items-md-stretch" style="margin-bottom: 40px; min-height: 300px;">
   <div class="col-md-12">
-    <div class="h-100 p-5 rounded-3 position-relative" style="background-image: url('https://png.pngtree.com/png-vector/20220822/ourmid/pngtree-illustration-of-bookshelves-with-retro-style-books-seamless-reading-wall-vector-png-image_26938484.jpg'); background-size: cover; background-position: center;">
+    <div class="h-100 p-5 rounded-3 position-relative"
+      style="background-image: url('https://png.pngtree.com/png-vector/20220822/ourmid/pngtree-illustration-of-bookshelves-with-retro-style-books-seamless-reading-wall-vector-png-image_26938484.jpg'); background-size: cover; background-position: center;">
       <div class="position-absolute top-0 start-0 w-200 h-100" style="background-color: rgba(0, 0, 0, 0.3);"></div>
       <div class="position-absolute top-0 start-50 translate-middle-x">
-        <div class="text-center">  <!-- Container for centering -->
+        <div class="text-center">
           <h3 class="text-black">Welcome to E-library</h3>
         </div>
       </div>
@@ -83,7 +72,7 @@
 <div class="container">
   <div class="row">
     <div class="col-md-10 offset-md-1"> <!-- Centered column -->
-      <div class="search-bar mb-4"> <!-- Added mb-4 for margin bottom -->
+      <div class="search-bar mb-4">
         <div class="input-group">
           <div class="input-group-prepend">
             <span class="input-group-text"><i class="fas fa-search"></i></span>
@@ -96,26 +85,30 @@
         </div>
       </div>
 
-      <div class="book-grid row"> <!-- Added book-grid class -->
-        <div class="book-card col-md-4 mb-4"> <!-- Added book-card class -->
+      <div class="book-grid row">
+        <div class="book-card col-md-4 mb-4">
           <div class="card">
             <img
               src="https://storage.googleapis.com/ltkcms.appspot.com/fs/yd/images/cover/book-genres.base?v=1591896477"
               class="card-img-top" alt="Book 1">
             <div class="card-body">
               <h5 class="card-title">Book Genres</h5>
-              <p class="card-text">There are various book genres to choose from</p>
-
+              <p class="card-text">There are various book genres to choose from.</p>
             </div>
           </div>
         </div>
+
         <div class="row">
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img src="https://microsite-uen-prod.s3.amazonaws.com/media/courseware/lesson/image/Screen_Shot_2021-08-07_at_5.11.03_PM_HpOI4LH.png" class="card-img-top" alt="Book 1">
+              <img
+                src="https://microsite-uen-prod.s3.amazonaws.com/media/courseware/lesson/image/Screen_Shot_2021-08-07_at_5.11.03_PM_HpOI4LH.png"
+                class="card-img-top" alt="Book 1">
               <div class="card-body">
                 <h5 class="card-title">Biography</h5>
-                <p class="card-text">A biography is a detailed description of a person's life.</p>
+                <p class="card-text">A biography, or simply bio, is a detailed description of a person's life. It
+                  involves more than just basic facts like education, work, relationships, and death; it portrays a
+                  person's experience of these life events.</p>
                 <a href="#" class="btn btn-primary">Read More</a>
               </div>
             </div>
@@ -123,10 +116,11 @@
 
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img src="https://i.pinimg.com/originals/8e/a5/0e/8ea50ef9aa5c7da4f87e88c4a8843bee.jpg" class="card-img-top">
+              <img src="https://i.pinimg.com/originals/8e/a5/0e/8ea50ef9aa5c7da4f87e88c4a8843bee.jpg"
+                class="card-img-top">
               <div class="card-body">
                 <h5 class="card-title">History</h5>
-                <p class="card-text">History books refer to the record of past events</p>
+                <p class="card-text">History books refer to the record of past events.</p>
                 <a href="#" class="btn btn-primary">Read More</a>
               </div>
             </div>
@@ -134,10 +128,12 @@
 
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img src="https://thumbs.dreamstime.com/b/movie-genre-icon-logo-sci-fi-space-rocket-world-globe-vector-flat-isolated-symbol-template-cinema-channel-movie-sci-101447468.jpg" class="card-img-top" alt="Book 2">
+              <img
+                src="https://thumbs.dreamstime.com/b/movie-genre-icon-logo-sci-fi-space-rocket-world-globe-vector-flat-isolated-symbol-template-cinema-channel-movie-sci-101447468.jpg"
+                class="card-img-top" alt="Book 2">
               <div class="card-body">
                 <h5 class="card-title">Science Fiction</h5>
-                <p class="card-text">Science fiction genre deals with imaginative and futuristic concepts</p>
+                <p class="card-text">Science fiction genre deals with imaginative and futuristic concepts.</p>
                 <a href="#" class="btn btn-primary">Read More</a>
               </div>
             </div>
@@ -145,37 +141,43 @@
 
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img src="https://th.bing.com/th/id/R.374c2e31eef5e931943671d20e4bee6b?rik=a2OlEH2CFshztg&riu=http%3a%2f%2fwww.nevadadesertexperience.org%2fimages%2fpoetry.gif&ehk=W9R0FGc2JxBk9Nxj9rN7pptdHt4oxHgEWD6FJyh4eCk%3d&risl=&pid=ImgRaw&r=0" class="card-img-top" alt="Book 3">
+              <img
+                src="https://thumbs.dreamstime.com/b/literary-poetry-book-icon-flat-isolated-vector-illustration-white-background-226983678.jpg"
+                class="card-img-top" alt="Book 3">
               <div class="card-body">
                 <h5 class="card-title">Poetry</h5>
-                <p class="card-text">A collection of poems can be found</p>
+                <p class="card-text">Poetry is a form of literary art that uses aesthetic and rhythmic qualities of
+                  language to evoke meanings.</p>
                 <a href="#" class="btn btn-primary">Read more</a>
               </div>
             </div>
           </div>
+          
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img src="https://i.etsystatic.com/42711062/r/il/40bb60/4973494419/il_fullxfull.4973494419_3e9m.jpg" class="card-img-top" alt="Book 3">
+              <img src="https://i.etsystatic.com/42711062/r/il/40bb60/4973494419/il_fullxfull.4973494419_3e9m.jpg"
+                class="card-img-top" alt="Book 3">
               <div class="card-body">
                 <h5 class="card-title">Fantasy</h5>
-                <p class="card-text">Fantasy is a genre  which involves themes of the supernatural, magic, and imaginary worlds and creatures</p>
+                <p class="card-text">Fantasy is a genre which involves themes of the supernatural, magic, and imaginary
+                  worlds and creatures.</p>
                 <a href="#" class="btn btn-primary">Read More</a>
               </div>
             </div>
           </div>
           <div class="col-md-4 mb-4">
             <div class="card">
-              <img src="https://clipground.com/images/mystery-clipart-black-and-white-14.jpg" class="card-img-top" alt="Book 3">
+              <img src="https://th.bing.com/th/id/OIP.HwshRalh8plPCjJMkyRIYQAAAA?rs=1&pid=ImgDetMain"
+                class="card-img-top" alt="Book 3">
               <div class="card-body">
                 <h5 class="card-title">Mystery</h5>
-                <p class="card-text">Find a collection of mystery books</p>
+                <p class="card-text">Mystery is a fiction genre where the nature of an event remains mysterious until
+                  the end of the story.</p>
                 <a href="#" class="btn btn-primary">Read More</a>
               </div>
             </div>
           </div>
-          <!-- Repeat for other book cards -->
         </div>
       </div>
     </div>
   </div>
-   

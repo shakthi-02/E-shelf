@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {BooksService} from "../../service/books.service";
 import {CommonModule} from "@angular/common";
 import {RouterLink} from "@angular/router";
+import { IBook } from '../../models/ibook';
 
 @Component({
   selector: 'app-list-books',
@@ -14,7 +15,7 @@ import {RouterLink} from "@angular/router";
   styleUrl: './list-books.component.css'
 })
 export class ListBooksComponent implements OnInit{
-  books: any[] =[];
+  books: IBook[] =[];
 
   constructor(private booksService: BooksService) {
 
