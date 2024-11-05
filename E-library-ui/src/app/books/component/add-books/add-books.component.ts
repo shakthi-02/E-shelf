@@ -2,19 +2,24 @@ import { Component } from '@angular/core';
 import {FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators} from "@angular/forms";
 import {BooksService} from "../../service/books.service";
 import {response} from "express";
+import {RouterLink} from "@angular/router";
+import {NgClass} from "@angular/common";
 
 @Component({
   selector: 'app-add-books',
   standalone: true,
   imports: [
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    RouterLink,
+    NgClass
   ],
   templateUrl: './add-books.component.html',
   styleUrl: './add-books.component.css'
 })
 export class AddBooksComponent {
   addBookForm : FormGroup;
+  isError: boolean = false;
 
   constructor(private bookService: BooksService) {
     this.addBookForm = new FormGroup({
@@ -29,8 +34,15 @@ export class AddBooksComponent {
 
   handleAddBook() {
     console.log(this.addBookForm);
-    this.bookService.addBook(this.addBookForm.value).subscribe((response: any) => {
-      console.log(response);
-    })
+    try{
+      this.bookService.addBook(this.addBookForm.value)
+        .subscribe((response: any) => {
+        console.log(response);
+      })
+    }
+    catch (error){
+      console.log(error);
+      this.isError = true;
+    }
   }
 }
