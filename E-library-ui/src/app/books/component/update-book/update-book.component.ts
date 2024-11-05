@@ -60,7 +60,5 @@ export class UpdateBookComponent implements OnInit {
       
     }
     }
-  
- 
 
 }
